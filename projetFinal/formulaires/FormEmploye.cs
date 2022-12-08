@@ -16,7 +16,5 @@ namespace projetFinal.formulaires
         {
             InitializeComponent();
         }
-
-        string hola;
     }
 }
