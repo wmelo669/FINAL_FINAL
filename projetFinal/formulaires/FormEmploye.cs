@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class Form1 : Form
+    public partial class FormEmploye : Form
     {
-        public Form1()
+        public FormEmploye()
         {
             InitializeComponent();
         }

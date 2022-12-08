@@ -67,11 +67,11 @@
     <Compile Include="classesEtInterfaces\Livre.cs" />
     <Compile Include="classesEtInterfaces\IAuteur.cs" />
     <Compile Include="classesEtInterfaces\Item.cs" />
-    <Compile Include="formulaires\Form1.cs">
+    <Compile Include="formulaires\FormEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formulaires\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="formulaires\FormEmploye.Designer.cs">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
     </Compile>
     <Compile Include="formulaires\FormMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -81,9 +81,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formulaires\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formulaires\FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
