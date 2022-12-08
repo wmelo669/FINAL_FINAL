@@ -17,11 +17,6 @@ namespace projetFinal
             InitializeComponent();
         }
 
-
-        public void Hello()
-        {
-            Console.WriteLine("hOLA");
-        }
     }
 
     
