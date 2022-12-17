@@ -16,7 +16,7 @@ namespace projetFinal.classesEtInterfaces
         string PaysDOrigineAuteur { get; set; }
 
         //Méthodes
-        int CalculerAge();
+        int CalculerAge(DateTime pDateDeNaissance);
         int nbDItems();
     }
 }

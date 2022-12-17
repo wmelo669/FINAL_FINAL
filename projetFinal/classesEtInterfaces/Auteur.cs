@@ -77,7 +77,14 @@ namespace projetFinal.classesEtInterfaces
         public string PaysDOrigineAuteur
         {
             get { return this.paysDOrigineAuteur; }
-            set { this.paysDOrigineAuteur = value; }
+            set
+            {
+                bool verifierPaysDOrigine = Regex.IsMatch(value, "^[A-Z]{1}[a-z]{1,29}$");
+                if (verifierPaysDOrigine)
+                {
+                    this.paysDOrigineAuteur = value;
+                }
+            }
         }
 
         /// <summary>
@@ -99,9 +106,13 @@ namespace projetFinal.classesEtInterfaces
         }
 
         //TODO: Les méthode calculerAge et nbDItems doivent etre terminées d'etre dévlopées. (Auteur)
-        public int CalculerAge()
+        public int CalculerAge(DateTime pDateDeNaissance)
         {
-            return 0;
+            DateTime dateEnCeMoment = DateTime.Today;
+            TimeSpan calculeDeLage = dateEnCeMoment - pDateDeNaissance;
+            int age = calculeDeLage.Days / 365;
+
+            return age;
         }
 
         public int nbDItems()
@@ -109,5 +120,16 @@ namespace projetFinal.classesEtInterfaces
             return 0;
         }
 
+        /// <summary>
+        /// Méthode override ToString pour afficher les informations de l'auteur
+        /// </summary>
+        /// <returns>La chaine de caractére contenant les informations de l'auteur!</returns>
+        public override string ToString()
+        {
+            string affichage = $"ID de l'auteur: {this.idAuteur}\nNom de l'auteur: {this.nomAuteur}\n" +
+                $"Prenom de l'auteur: {this.prenomAuteur}\nDate de naissnce de l'auteur: {this.datedeNaissanceAuteur}\n" +
+                $"Pays d'oigine de l'auteur{this.paysDOrigineAuteur}";
+            return affichage;
+        }
     }
 }

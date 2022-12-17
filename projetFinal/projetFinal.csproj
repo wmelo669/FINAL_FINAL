@@ -67,6 +67,60 @@
     <Compile Include="classesEtInterfaces\Livre.cs" />
     <Compile Include="classesEtInterfaces\IAuteur.cs" />
     <Compile Include="classesEtInterfaces\Item.cs" />
+    <Compile Include="formulaires\FormRegarderPrets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\Form1.Designer.cs">
+      <DependentUpon>FormRegarderPrets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormRegarderEmployes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormRegarderEmployes.Designer.cs">
+      <DependentUpon>FormRegarderEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormModifierLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormModifierLivre.Designer.cs">
+      <DependentUpon>FormModifierLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormCompteEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormCompteEmploye.Designer.cs">
+      <DependentUpon>FormCompteEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormModifierCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormModifierCompte.Designer.cs">
+      <DependentUpon>FormModifierCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormCreerAuteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormCreerAuteur.Designer.cs">
+      <DependentUpon>FormCreerAuteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormCreerLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormCreerLivre.Designer.cs">
+      <DependentUpon>FormCreerLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormCompte.Designer.cs">
+      <DependentUpon>FormCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="formulaires\FormEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +135,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formulaires\FormCompteEmploye.resx">
+      <DependentUpon>FormCompteEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormCreerAuteur.resx">
+      <DependentUpon>FormCreerAuteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormCreerLivre.resx">
+      <DependentUpon>FormCreerLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormCompte.resx">
+      <DependentUpon>FormCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormEmploye.resx">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formulaires\FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormModifierCompte.resx">
+      <DependentUpon>FormModifierCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormModifierLivre.resx">
+      <DependentUpon>FormModifierLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormRegarderEmployes.resx">
+      <DependentUpon>FormRegarderEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormRegarderPrets.resx">
+      <DependentUpon>FormRegarderPrets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

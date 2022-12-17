@@ -71,7 +71,13 @@ namespace projetFinal.classesEtInterfaces
         public string MotDePasse
         {
             get { return this.motDePasse; }
-            set { this.motDePasse = value; }
+            set
+            {
+                if(value.Length  > 0)
+                {
+                    this.motDePasse = value;
+                }
+            }
         }
 
         /// <summary>

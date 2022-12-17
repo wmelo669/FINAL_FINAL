@@ -14,6 +14,7 @@ namespace projetFinal.classesEtInterfaces
         private int nombreDePage;
         private int nbDeChapitres;
         private string maisonDEdition;
+        private int quantite;
 
         //Propriétés
 
@@ -44,7 +45,7 @@ namespace projetFinal.classesEtInterfaces
             }
         }
 
-        //Nombre de chapitres
+        //OMBRE DE CHAPITRES
         public int NbDeChapitres
         {
             get { return this.nbDeChapitres; }
@@ -57,11 +58,30 @@ namespace projetFinal.classesEtInterfaces
             }
         }
 
-        //Maison d'édition
+        //MAISON D'ÉDITION
         public string MaisonDEdition
         {
             get { return this.maisonDEdition; }
-            set { this.maisonDEdition = value; }
+            set
+            {
+                if (value.Length > 0)
+                {
+                    this.maisonDEdition = value;
+                }
+            }
+        }
+
+        //QUANTITÉ
+        public int Quantite
+        {
+            get { return this.quantite; }
+            set
+            {
+                if (value >= 0)
+                {
+                    this.quantite = value;  
+                }
+            }
         }
 
         // NUMERO D'ITEM
@@ -92,14 +112,14 @@ namespace projetFinal.classesEtInterfaces
             }
         }
 
-        //AUTEUR
-        public override Auteur Auteur_
+        //Id Auteur
+        public override string IdAuteur
         {
-            get { return base.auteur_; }
-            set { base.auteur_ = value; }
+            get { return base.idAuteur; }
+            set { base.idAuteur = value; }
         }
 
-        //DATE DE NAISSANCE
+        //DATE DE PARUTION
         public override DateTime DateDeParution
         {
             get { return base.dateDeParution; }
@@ -116,7 +136,14 @@ namespace projetFinal.classesEtInterfaces
         public override string LangueDOrigine
         {
             get { return base.langueDOrigine; }
-            set { base.langueDOrigine = value; }
+            set
+            {
+                bool verifierLangue = Regex.IsMatch(value, "^[A-Z]{1}[a-z]{1,49}$");
+                if (verifierLangue)
+                {
+                    this.langueDOrigine = value;
+                }
+            }
         }
 
         /// <summary>
@@ -128,27 +155,27 @@ namespace projetFinal.classesEtInterfaces
         /// <param name="pMaisonDEdition">Maison d'édition du livre</param>
         /// <param name="pNumeroItem">Numero d'item livre</param>
         /// <param name="pTitre">Titre du livre</param>
-        /// <param name="pAuteur">Auteur du livre</param>
+        /// <param name="pIdAuteur">Auteur du livre</param>
         /// <param name="pDateDeParution">Date de parution du livre.</param>
         /// <param name="pLangueDOrigine">Langue d'origine du livre</param>
         public Livre(string pIsbn = "*", int pNombreDePages = 0, int pNbDeChapitres = 0,
-            string pMaisonDEdition = "*", string pNumeroItem = "*", string pTitre = "*",
-            Auteur pAuteur = default(Auteur), DateTime pDateDeParution = default(DateTime),
+            string pMaisonDEdition = "*", int pQuantite = 0, string pNumeroItem = "*", string pTitre = "*",
+            string pIdAuteur = "0", DateTime pDateDeParution = default(DateTime),
             string pLangueDOrigine = "*")
-            :base(pNumeroItem, pTitre, pAuteur, pDateDeParution, pLangueDOrigine)
+            :base(pNumeroItem, pTitre, pIdAuteur, pDateDeParution, pLangueDOrigine)
         {
             this.isbn = pIsbn;
             this.nombreDePage = pNombreDePages;
             this.nbDeChapitres = pNbDeChapitres;
             this.maisonDEdition = pMaisonDEdition;
-            this.numeroItem = pNumeroItem;
+            this.Quantite = pQuantite;
         }
 
         public override string ToString()
         {
             string affichage = $"ISBN: {this.isbn}\nNombre de pages: {this.nombreDePage}\nNombre de chapitres: {this.nbDeChapitres}" +
                 $"\nMaison d'édition: {this.maisonDEdition}\nNumero d'item: {this.numeroItem}\nTitre: {this.titre}\n" +
-                $"ID de l'auteur: {this.auteur_.IdAuteur}\nNom de l'auteur: {this.auteur_.NomAuteur}\n";
+                $"ID de l'auteur: {this.idAuteur}\n";
             return affichage;
         }
     }
