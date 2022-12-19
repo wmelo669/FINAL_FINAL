@@ -12,7 +12,7 @@ using projetFinal.formulaires;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormClient : Form
+    public partial class FormClient : System.Windows.Forms.Form
     {
         //Variables globales
 
@@ -50,6 +50,8 @@ namespace projetFinal.formulaires
             //Mise a jour de la varibale pour savoir si formulaire créer ou non
             Outils.formCreerClientDispo = true;
             Outils.formModifierClientDispo = true;
+            Outils.formFairePrets = true;
+            Outils.formRegarderPrets = true;
         }
 
         /// <summary>
@@ -68,6 +70,14 @@ namespace projetFinal.formulaires
             if(Outils.formModifierClientDispo == true)
             {
                 modifierCompteToolStripMenuItem.Enabled = true;
+            }
+            if (Outils.formFairePrets == true)
+            {
+                faireUnPretToolStripMenuItem.Enabled = true;
+            }
+            if(Outils.formRegarderPrets == true)
+            {
+                regarderPretToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -88,6 +98,35 @@ namespace projetFinal.formulaires
                 formulaireModifierCompte.Show();
             }
 
+        }
+
+        /// <summary>
+        /// Gestionanaire de l'évènement click envoyé par le bouton du menu strip faire prets
+        /// </summary>
+        /// <param name="sender">Bouton menu strip faire pret</param>
+        /// <param name="e">Évènement click du bouton fiare pret dans le menu strip</param>
+        private void faireUnPretToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Outils.formFairePrets == true)
+            {
+                Outils.formFairePrets = false;
+                faireUnPretToolStripMenuItem.Enabled = false;
+                FormPrets formulairePrets = new FormPrets();
+                formulairePrets.MdiParent = this;
+                formulairePrets.Show();
+            }
+        }
+
+        private void regarderPretToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(Outils.formRegarderPrets == true)
+            {
+                Outils.formRegarderPrets = false;
+                regarderPretToolStripMenuItem.Enabled = false;
+                FormRegarderPrets formRegarderPrets = new FormRegarderPrets();
+                formRegarderPrets.MdiParent = this;
+                formRegarderPrets.Show();
+            }
         }
     }
 }

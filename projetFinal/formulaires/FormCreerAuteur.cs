@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormCreerAuteur : Form
+    public partial class FormCreerAuteur : System.Windows.Forms.Form
     {
         //Variable de validation des données
         bool valideridAuteur = false;
@@ -30,7 +30,6 @@ namespace projetFinal.formulaires
         string query;
         string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
         SqlCommand commande;
-        SqlDataReader resultat;
 
         public FormCreerAuteur()
         {

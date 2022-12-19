@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ Pour les datagridview, et les listview, j'ai me suis inspiré un peu du codde de Hasna Hocini
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

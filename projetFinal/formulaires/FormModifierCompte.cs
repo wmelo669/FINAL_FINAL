@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormModifierCompte : Form
+    public partial class FormModifierCompte : System.Windows.Forms.Form
     {
         //Variables d'utilisation globale
         bool compteExistant = false;
@@ -22,7 +22,7 @@ namespace projetFinal.formulaires
         //Variables pour la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=2000";
+        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
         SqlCommand commande;
         SqlDataReader resultat;
 

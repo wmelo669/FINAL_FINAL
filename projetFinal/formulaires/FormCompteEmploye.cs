@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormCompteEmploye : Form
+    public partial class FormCompteEmploye : System.Windows.Forms.Form
     {
         //Variables d'utilisation globale
         //Variable de validation des données

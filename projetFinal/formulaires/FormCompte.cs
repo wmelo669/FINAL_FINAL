@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormCompte : Form
+    public partial class FormCompte : System.Windows.Forms.Form
     {
         //Variables d'utilisation globale
         //Variables Globales

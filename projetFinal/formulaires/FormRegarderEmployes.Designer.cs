@@ -50,6 +50,7 @@
             this.dtgrid_mdpCompte_visualisation});
             this.dataGridViewEmployes_visualiserEmployes.Location = new System.Drawing.Point(76, 177);
             this.dataGridViewEmployes_visualiserEmployes.Name = "dataGridViewEmployes_visualiserEmployes";
+            this.dataGridViewEmployes_visualiserEmployes.ReadOnly = true;
             this.dataGridViewEmployes_visualiserEmployes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEmployes_visualiserEmployes.Size = new System.Drawing.Size(944, 150);
             this.dataGridViewEmployes_visualiserEmployes.TabIndex = 0;
@@ -58,6 +59,7 @@
             // 
             this.dtgrid_numCompte_visualisation.HeaderText = "Numéro de compte";
             this.dtgrid_numCompte_visualisation.Name = "dtgrid_numCompte_visualisation";
+            this.dtgrid_numCompte_visualisation.ReadOnly = true;
             this.dtgrid_numCompte_visualisation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgrid_numCompte_visualisation.Width = 180;
             // 
@@ -65,6 +67,7 @@
             // 
             this.dtgrid_nomCompte_visualisation.HeaderText = "Nom du compte";
             this.dtgrid_nomCompte_visualisation.Name = "dtgrid_nomCompte_visualisation";
+            this.dtgrid_nomCompte_visualisation.ReadOnly = true;
             this.dtgrid_nomCompte_visualisation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgrid_nomCompte_visualisation.Width = 180;
             // 
@@ -72,6 +75,7 @@
             // 
             this.dtgrid_prenomCompte_visualisation.HeaderText = "Prenom du compte";
             this.dtgrid_prenomCompte_visualisation.Name = "dtgrid_prenomCompte_visualisation";
+            this.dtgrid_prenomCompte_visualisation.ReadOnly = true;
             this.dtgrid_prenomCompte_visualisation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgrid_prenomCompte_visualisation.Width = 180;
             // 
@@ -79,6 +83,7 @@
             // 
             this.dtgrid_typeCompte_visualisation.HeaderText = "Type de compte";
             this.dtgrid_typeCompte_visualisation.Name = "dtgrid_typeCompte_visualisation";
+            this.dtgrid_typeCompte_visualisation.ReadOnly = true;
             this.dtgrid_typeCompte_visualisation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgrid_typeCompte_visualisation.Width = 180;
             // 
@@ -86,6 +91,7 @@
             // 
             this.dtgrid_mdpCompte_visualisation.HeaderText = "Mot de passe";
             this.dtgrid_mdpCompte_visualisation.Name = "dtgrid_mdpCompte_visualisation";
+            this.dtgrid_mdpCompte_visualisation.ReadOnly = true;
             this.dtgrid_mdpCompte_visualisation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgrid_mdpCompte_visualisation.Width = 180;
             // 

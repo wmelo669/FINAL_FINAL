@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormCreerLivre : Form
+    public partial class FormCreerLivre : System.Windows.Forms.Form
     {
         //Variables d'utilisation globale
         Livre livre_ = new Livre();

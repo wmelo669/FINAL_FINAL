@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormEmploye : Form
+    public partial class FormEmploye : System.Windows.Forms.Form
     {
         public FormEmploye()
         {

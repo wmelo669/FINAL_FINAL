@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace projetFinal
 {
-    public partial class FormMenuPrincipal : Form
+    public partial class FormMenuPrincipal : System.Windows.Forms.Form
     {
         public FormMenuPrincipal()
         {

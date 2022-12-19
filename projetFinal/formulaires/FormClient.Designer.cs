@@ -31,9 +31,9 @@
             this.ms_client = new System.Windows.Forms.MenuStrip();
             this.rechargerLeMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_creerCompte_btn = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faireUnPretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regarderPretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_client.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,24 +69,26 @@
             this.ms_creerCompte_btn.Text = "Créer compte";
             this.ms_creerCompte_btn.Click += new System.EventHandler(this.espaceClient_creerCompte_click);
             // 
-            // faireUnPretToolStripMenuItem
-            // 
-            this.faireUnPretToolStripMenuItem.Name = "faireUnPretToolStripMenuItem";
-            this.faireUnPretToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.faireUnPretToolStripMenuItem.Text = "Faire un pret";
-            // 
-            // regarderPretToolStripMenuItem
-            // 
-            this.regarderPretToolStripMenuItem.Name = "regarderPretToolStripMenuItem";
-            this.regarderPretToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.regarderPretToolStripMenuItem.Text = "Regarder pret";
-            // 
             // modifierCompteToolStripMenuItem
             // 
             this.modifierCompteToolStripMenuItem.Name = "modifierCompteToolStripMenuItem";
             this.modifierCompteToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.modifierCompteToolStripMenuItem.Text = "Modifier compte";
             this.modifierCompteToolStripMenuItem.Click += new System.EventHandler(this.modifierCompteToolStripMenuItem_Click);
+            // 
+            // faireUnPretToolStripMenuItem
+            // 
+            this.faireUnPretToolStripMenuItem.Name = "faireUnPretToolStripMenuItem";
+            this.faireUnPretToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.faireUnPretToolStripMenuItem.Text = "Faire un pret";
+            this.faireUnPretToolStripMenuItem.Click += new System.EventHandler(this.faireUnPretToolStripMenuItem_Click);
+            // 
+            // regarderPretToolStripMenuItem
+            // 
+            this.regarderPretToolStripMenuItem.Name = "regarderPretToolStripMenuItem";
+            this.regarderPretToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.regarderPretToolStripMenuItem.Text = "Regarder pret";
+            this.regarderPretToolStripMenuItem.Click += new System.EventHandler(this.regarderPretToolStripMenuItem_Click);
             // 
             // FormClient
             // 

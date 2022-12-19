@@ -34,11 +34,9 @@
             this.creerEmployéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creerClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creerLivreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierLivreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voirEmployésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voirPretsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voirBibliothequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierEmployéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,11 +49,9 @@
             this.creerEmployéToolStripMenuItem,
             this.creerClientToolStripMenuItem,
             this.creerLivreToolStripMenuItem,
-            this.modifierLivreToolStripMenuItem,
             this.voirEmployésToolStripMenuItem,
             this.voirPretsToolStripMenuItem,
-            this.voirBibliothequeToolStripMenuItem,
-            this.modifierEmployéToolStripMenuItem});
+            this.voirBibliothequeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1054, 24);
@@ -98,12 +94,6 @@
             this.creerLivreToolStripMenuItem.Text = "Creer livre";
             this.creerLivreToolStripMenuItem.Click += new System.EventHandler(this.creerLivreToolStripMenuItem_Click);
             // 
-            // modifierLivreToolStripMenuItem
-            // 
-            this.modifierLivreToolStripMenuItem.Name = "modifierLivreToolStripMenuItem";
-            this.modifierLivreToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
-            this.modifierLivreToolStripMenuItem.Text = "Modifier livre";
-            // 
             // voirEmployésToolStripMenuItem
             // 
             this.voirEmployésToolStripMenuItem.Name = "voirEmployésToolStripMenuItem";
@@ -122,13 +112,6 @@
             this.voirBibliothequeToolStripMenuItem.Name = "voirBibliothequeToolStripMenuItem";
             this.voirBibliothequeToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
             this.voirBibliothequeToolStripMenuItem.Text = "Voir bibliotheque";
-            // 
-            // modifierEmployéToolStripMenuItem
-            // 
-            this.modifierEmployéToolStripMenuItem.Name = "modifierEmployéToolStripMenuItem";
-            this.modifierEmployéToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.modifierEmployéToolStripMenuItem.Text = "Modifier employé";
-            this.modifierEmployéToolStripMenuItem.Click += new System.EventHandler(this.modifierEmployéToolStripMenuItem_Click);
             // 
             // FormEmploye
             // 
@@ -161,7 +144,5 @@
         private System.Windows.Forms.ToolStripMenuItem voirPretsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem voirBibliothequeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rechargerLeMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierLivreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierEmployéToolStripMenuItem;
     }
 }

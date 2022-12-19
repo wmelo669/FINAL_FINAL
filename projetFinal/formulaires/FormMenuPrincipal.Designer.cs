@@ -78,7 +78,7 @@
             this.Controls.Add(this.lbl_titre_menu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuPrincipal";
-            this.Text = "Form1";
+            this.Text = "Bibliotheque WM";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace projetFinal.formulaires
 {
-    public partial class FormRegarderEmployes : Form
+    public partial class FormRegarderEmployes : System.Windows.Forms.Form
     {
         //Variables globales
 
         //Accès a la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=2000";
+        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
         SqlCommand commande;
         SqlDataReader resultat;
 

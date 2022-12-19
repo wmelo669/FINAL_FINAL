@@ -1,6 +1,6 @@
 ﻿namespace projetFinal.formulaires
 {
-    partial class Form1
+    partial class FormRegarderPrets
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lbl_visualizerPrets_clien = new System.Windows.Forms.Label();
+            this.btn_validerNumCompte_visualizerEmprunt = new System.Windows.Forms.Button();
+            this.txtb_numCompte_visualizerEmprunt = new System.Windows.Forms.TextBox();
+            this.lbl_numCompte_visalizerEmprunt = new System.Windows.Forms.Label();
+            this.listview_visualizerPrets = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_visualizerPrets_clien
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Visualisation des prets des clients :)";
+            this.lbl_visualizerPrets_clien.AutoSize = true;
+            this.lbl_visualizerPrets_clien.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_visualizerPrets_clien.Location = new System.Drawing.Point(203, 42);
+            this.lbl_visualizerPrets_clien.Name = "lbl_visualizerPrets_clien";
+            this.lbl_visualizerPrets_clien.Size = new System.Drawing.Size(400, 31);
+            this.lbl_visualizerPrets_clien.TabIndex = 2;
+            this.lbl_visualizerPrets_clien.Text = "Visualisation des prets des clients :)";
             // 
-            // listView1
+            // btn_validerNumCompte_visualizerEmprunt
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.btn_validerNumCompte_visualizerEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_validerNumCompte_visualizerEmprunt.Location = new System.Drawing.Point(515, 97);
+            this.btn_validerNumCompte_visualizerEmprunt.Name = "btn_validerNumCompte_visualizerEmprunt";
+            this.btn_validerNumCompte_visualizerEmprunt.Size = new System.Drawing.Size(107, 35);
+            this.btn_validerNumCompte_visualizerEmprunt.TabIndex = 60;
+            this.btn_validerNumCompte_visualizerEmprunt.Text = "Valider";
+            this.btn_validerNumCompte_visualizerEmprunt.UseVisualStyleBackColor = true;
+            this.btn_validerNumCompte_visualizerEmprunt.Click += new System.EventHandler(this.btn_validerNumCompte_visualizerEmprunt_Click);
+            // 
+            // txtb_numCompte_visualizerEmprunt
+            // 
+            this.txtb_numCompte_visualizerEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtb_numCompte_visualizerEmprunt.Location = new System.Drawing.Point(311, 101);
+            this.txtb_numCompte_visualizerEmprunt.Name = "txtb_numCompte_visualizerEmprunt";
+            this.txtb_numCompte_visualizerEmprunt.Size = new System.Drawing.Size(187, 24);
+            this.txtb_numCompte_visualizerEmprunt.TabIndex = 59;
+            // 
+            // lbl_numCompte_visalizerEmprunt
+            // 
+            this.lbl_numCompte_visalizerEmprunt.AutoSize = true;
+            this.lbl_numCompte_visalizerEmprunt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numCompte_visalizerEmprunt.Location = new System.Drawing.Point(139, 101);
+            this.lbl_numCompte_visalizerEmprunt.Name = "lbl_numCompte_visalizerEmprunt";
+            this.lbl_numCompte_visalizerEmprunt.Size = new System.Drawing.Size(154, 21);
+            this.lbl_numCompte_visalizerEmprunt.TabIndex = 58;
+            this.lbl_numCompte_visalizerEmprunt.Text = "Numéro de compte";
+            // 
+            // listview_visualizerPrets
+            // 
+            this.listview_visualizerPrets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(66, 170);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(619, 97);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.columnHeader2});
+            this.listview_visualizerPrets.FullRowSelect = true;
+            this.listview_visualizerPrets.GridLines = true;
+            this.listview_visualizerPrets.HideSelection = false;
+            this.listview_visualizerPrets.Location = new System.Drawing.Point(71, 147);
+            this.listview_visualizerPrets.Name = "listview_visualizerPrets";
+            this.listview_visualizerPrets.Size = new System.Drawing.Size(619, 252);
+            this.listview_visualizerPrets.TabIndex = 61;
+            this.listview_visualizerPrets.UseCompatibleStateImageBehavior = false;
+            this.listview_visualizerPrets.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Numéro de facture";
+            this.columnHeader6.Width = 109;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "ISBN";
+            this.columnHeader7.Width = 110;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Numéro de compte";
+            this.columnHeader8.Width = 151;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "dsds";
+            this.columnHeader1.Text = "Quantité";
+            this.columnHeader1.Width = 107;
             // 
-            // Form1
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Date du pret";
+            this.columnHeader2.Width = 138;
+            // 
+            // FormRegarderPrets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(818, 428);
+            this.Controls.Add(this.listview_visualizerPrets);
+            this.Controls.Add(this.btn_validerNumCompte_visualizerEmprunt);
+            this.Controls.Add(this.txtb_numCompte_visualizerEmprunt);
+            this.Controls.Add(this.lbl_numCompte_visalizerEmprunt);
+            this.Controls.Add(this.lbl_visualizerPrets_clien);
+            this.Name = "FormRegarderPrets";
             this.Text = "Emprunts";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegarderPrets_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,11 +142,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label lbl_visualizerPrets_clien;
+        private System.Windows.Forms.Button btn_validerNumCompte_visualizerEmprunt;
+        private System.Windows.Forms.TextBox txtb_numCompte_visualizerEmprunt;
+        private System.Windows.Forms.Label lbl_numCompte_visalizerEmprunt;
+        private System.Windows.Forms.ListView listview_visualizerPrets;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
