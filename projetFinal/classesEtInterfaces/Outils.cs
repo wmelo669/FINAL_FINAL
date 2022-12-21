@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace projetFinal.classesEtInterfaces
 {
@@ -15,8 +16,6 @@ namespace projetFinal.classesEtInterfaces
     {
 
         //Propriétés 
-        public static int nombreDAuteurs;
-        public static int nombreDeLivres;
         public static bool formCreerClientDispo;
         public static bool formModifierClientDispo;
         public static bool formCreerAuteurDispo;
@@ -34,8 +33,6 @@ namespace projetFinal.classesEtInterfaces
         /// </summary>
         static Outils()
         {
-            nombreDAuteurs = 0;
-            nombreDeLivres = 0;
             formCreerClientDispo = true;
             formModifierClientDispo = true;
             formCreerAuteurDispo = true;
@@ -64,7 +61,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 
@@ -99,7 +96,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 
@@ -133,7 +130,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 
@@ -167,7 +164,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 
@@ -201,7 +198,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 
@@ -227,62 +224,6 @@ namespace projetFinal.classesEtInterfaces
             else
             {
                 return false;
-            }
-        }
-
-        /// <summary>
-        /// Cette méthode sert a returner une information d'un auteur dependament des paramètres
-        /// </summary>
-        /// <param name="pIdAuteur">ID de l'auteur a regarder pour de l'information.</param>
-        /// <param name="pInfoDemande">Le nom, le prenom etc...</param>
-        /// <returns></returns>
-        public static object AvoirInfoAuteur(string pIdAuteur, string pInfoDemande)
-        {
-            //Accès a la base de données
-            SqlConnection connexion;
-            string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
-            SqlCommand commande;
-            SqlDataReader resultat;
-
-            connexion = new SqlConnection();
-            connexion.ConnectionString = connexionString;
-            query = $"SELECT * FROM Auteur_t WHERE idAuteur = {pIdAuteur}";
-            commande = new SqlCommand(query, connexion);
-
-            connexion.Open();
-            resultat = commande.ExecuteReader();
-
-            if (resultat.HasRows)
-            {
-                if(pInfoDemande == "idAuteur")
-                {
-                    return resultat[0];
-                }
-                else if (pInfoDemande == "nomAuteur")
-                {
-                    return resultat[1];
-                }
-                else if (pInfoDemande == "prenomAuteur")
-                {
-                    return resultat[2];
-                }
-                else if (pInfoDemande == "dateDeNaissanceAuteur")
-                {
-                    return resultat[3];
-                }
-                else if (pInfoDemande == "paysDOrigine")
-                {
-                    return resultat[4];
-                }
-                else
-                {
-                    return default;
-                }
-            }
-            else
-            {
-                return default;
             }
         }
 
@@ -314,7 +255,7 @@ namespace projetFinal.classesEtInterfaces
             //Accès a la base de données.
             SqlConnection connexion;
             string query;
-            string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+            string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
             SqlCommand commande;
             SqlDataReader resultat;
 

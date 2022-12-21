@@ -106,6 +106,7 @@
             this.voirPretsToolStripMenuItem.Name = "voirPretsToolStripMenuItem";
             this.voirPretsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.voirPretsToolStripMenuItem.Text = "Voir prets";
+            this.voirPretsToolStripMenuItem.Click += new System.EventHandler(this.voirPretsToolStripMenuItem_Click);
             // 
             // voirBibliothequeToolStripMenuItem
             // 

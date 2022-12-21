@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace projetFinal.formulaires
 {
@@ -21,7 +22,7 @@ namespace projetFinal.formulaires
         //Vriables pour la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+        string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
         SqlCommand commande;
         SqlDataReader resultat;
 
@@ -223,6 +224,13 @@ namespace projetFinal.formulaires
 
         }
 
+        /// <summary>
+        /// Gestionnaire de l'évènement text changed dans les components qui demandent
+        /// d'entrer des données. A comme fonction de faire tout le temps valider les
+        /// données une fois un changement fait dans n'importe quel des componenets.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void inputs_creerLivre_textChanged(object sender, EventArgs e)
         {
             btn_ajouter_creerLivre.Enabled = false;

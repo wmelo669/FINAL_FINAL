@@ -32,12 +32,12 @@
             this.btn_validerNumCompte_visualizerEmprunt = new System.Windows.Forms.Button();
             this.txtb_numCompte_visualizerEmprunt = new System.Windows.Forms.TextBox();
             this.lbl_numCompte_visalizerEmprunt = new System.Windows.Forms.Label();
-            this.listview_visualizerPrets = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView_visualiserPrets = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbl_visualizerPrets_clien
@@ -79,55 +79,54 @@
             this.lbl_numCompte_visalizerEmprunt.TabIndex = 58;
             this.lbl_numCompte_visalizerEmprunt.Text = "Numéro de compte";
             // 
-            // listview_visualizerPrets
+            // listView_visualiserPrets
             // 
-            this.listview_visualizerPrets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
+            this.listView_visualiserPrets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
-            this.listview_visualizerPrets.FullRowSelect = true;
-            this.listview_visualizerPrets.GridLines = true;
-            this.listview_visualizerPrets.HideSelection = false;
-            this.listview_visualizerPrets.Location = new System.Drawing.Point(71, 147);
-            this.listview_visualizerPrets.Name = "listview_visualizerPrets";
-            this.listview_visualizerPrets.Size = new System.Drawing.Size(619, 252);
-            this.listview_visualizerPrets.TabIndex = 61;
-            this.listview_visualizerPrets.UseCompatibleStateImageBehavior = false;
-            this.listview_visualizerPrets.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Numéro de facture";
-            this.columnHeader6.Width = 109;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "ISBN";
-            this.columnHeader7.Width = 110;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Numéro de compte";
-            this.columnHeader8.Width = 151;
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView_visualiserPrets.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView_visualiserPrets.HideSelection = false;
+            this.listView_visualiserPrets.Location = new System.Drawing.Point(143, 166);
+            this.listView_visualiserPrets.Name = "listView_visualiserPrets";
+            this.listView_visualiserPrets.Size = new System.Drawing.Size(555, 176);
+            this.listView_visualiserPrets.TabIndex = 61;
+            this.listView_visualiserPrets.UseCompatibleStateImageBehavior = false;
+            this.listView_visualiserPrets.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Quantité";
-            this.columnHeader1.Width = 107;
+            this.columnHeader1.Text = "Numéro de facture";
+            this.columnHeader1.Width = 110;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Date du pret";
-            this.columnHeader2.Width = 138;
+            this.columnHeader2.Text = "ISBN";
+            this.columnHeader2.Width = 110;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Numéro de compte";
+            this.columnHeader3.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Quantité";
+            this.columnHeader4.Width = 110;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Date du pret";
+            this.columnHeader5.Width = 110;
             // 
             // FormRegarderPrets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 428);
-            this.Controls.Add(this.listview_visualizerPrets);
+            this.Controls.Add(this.listView_visualiserPrets);
             this.Controls.Add(this.btn_validerNumCompte_visualizerEmprunt);
             this.Controls.Add(this.txtb_numCompte_visualizerEmprunt);
             this.Controls.Add(this.lbl_numCompte_visalizerEmprunt);
@@ -146,11 +145,11 @@
         private System.Windows.Forms.Button btn_validerNumCompte_visualizerEmprunt;
         private System.Windows.Forms.TextBox txtb_numCompte_visualizerEmprunt;
         private System.Windows.Forms.Label lbl_numCompte_visalizerEmprunt;
-        private System.Windows.Forms.ListView listview_visualizerPrets;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ListView listView_visualiserPrets;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

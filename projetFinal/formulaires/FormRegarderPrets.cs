@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace projetFinal.formulaires
 {
@@ -17,7 +18,7 @@ namespace projetFinal.formulaires
         //Accès a la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+        string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
         SqlCommand commande;
         SqlDataReader resultat;
 
@@ -31,13 +32,13 @@ namespace projetFinal.formulaires
             Outils.formRegarderPrets = true;
         }
 
+        /// <summary>
+        /// Gestionnaire de l'évènement click du bouton valider pour afficher les prets d'un compte.
+        /// </summary>
+        /// <param name="sender">Le bouton valider</param>
+        /// <param name="e">L'évènement click.</param>
         private void btn_validerNumCompte_visualizerEmprunt_Click(object sender, EventArgs e)
         {
-            /*
-             Dans cette partie, il y a une erreur lors de l'affichage dans la liste view, mais j'ai manqué du temps
-            pour l'arranger
-             */
-
             query = $"SELECT * FROM Facture_t WHERE numCompte = '{txtb_numCompte_visualizerEmprunt.Text}'";
             connexion = new SqlConnection();
             connexion.ConnectionString = connexionString;
@@ -50,17 +51,16 @@ namespace projetFinal.formulaires
 
             if (resultat.HasRows)
             {
-                listview_visualizerPrets.Items.Clear();
+                //Vider la liste après chaque click pour actualiser la liste view.
+                listView_visualiserPrets.Items.Clear();
                 while (resultat.Read())
                 {                   
-                    ListViewItem lvItem = new ListViewItem();
-                    lvItem.SubItems.Add((string)resultat[0]);
+                    ListViewItem lvItem = new ListViewItem((string)resultat[0]);    
                     lvItem.SubItems.Add((string)resultat[1]);
                     lvItem.SubItems.Add((string)resultat[2]);
                     lvItem.SubItems.Add(resultat[3].ToString());
                     lvItem.SubItems.Add(resultat[4].ToString());
-                    listview_visualizerPrets.Items.Add(lvItem);
-               
+                    listView_visualiserPrets.Items.Add(lvItem);
                 }
             }
             else

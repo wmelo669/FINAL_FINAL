@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace projetFinal.formulaires
 {
@@ -28,7 +29,7 @@ namespace projetFinal.formulaires
         //Vriables pour la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+        string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
         SqlCommand commande;
 
         public FormCreerAuteur()

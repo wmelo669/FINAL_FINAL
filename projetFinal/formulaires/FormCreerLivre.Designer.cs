@@ -70,7 +70,7 @@
             this.txtb_isbn_creerLivre.Name = "txtb_isbn_creerLivre";
             this.txtb_isbn_creerLivre.Size = new System.Drawing.Size(180, 24);
             this.txtb_isbn_creerLivre.TabIndex = 16;
-            this.txtb_isbn_creerLivre.TextChanged += new System.EventHandler(this.inputComponents_creerLivre_textChanged);
+            this.txtb_isbn_creerLivre.TextChanged += new System.EventHandler(this.inputs_creerLivre_textChanged);
             // 
             // label1
             // 
@@ -263,6 +263,7 @@
             this.txtb_numéroDItem_creerLivre.Name = "txtb_numéroDItem_creerLivre";
             this.txtb_numéroDItem_creerLivre.Size = new System.Drawing.Size(180, 24);
             this.txtb_numéroDItem_creerLivre.TabIndex = 12;
+            this.txtb_numéroDItem_creerLivre.TextChanged += new System.EventHandler(this.inputs_creerLivre_textChanged);
             // 
             // lbl_numeroDItem_creerLivre
             // 

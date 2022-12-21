@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace projetFinal.formulaires
 {
@@ -17,7 +18,7 @@ namespace projetFinal.formulaires
         //Accès a la base de données
         SqlConnection connexion;
         string query;
-        string connexionString = "Data Source=localhost;Initial Catalog=examFinal;User ID=sa;Password=sql";
+        string connexionString = ConfigurationManager.ConnectionStrings["connexionSqlServer"].ConnectionString;
         SqlCommand commande;
         SqlDataReader resultat;
 
@@ -36,6 +37,11 @@ namespace projetFinal.formulaires
             Outils.formFairePrets = true;
         }
 
+        /// <summary>
+        /// Gestionnaire de l'évènement load du formulaire pour faire un pret.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormPrets_Load(object sender, EventArgs e)
         {
             query = "SELECT L.isbn, L.titre, L.nombreDePages, L.langueDOrigine, L.quantite, A.nomAuteur FROM Livre_t L INNER JOIN Auteur_t A ON L.idAuteur = A.idAuteur";

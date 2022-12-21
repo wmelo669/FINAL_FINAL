@@ -40,9 +40,9 @@ namespace projetFinal.formulaires
             {
                 voirEmployésToolStripMenuItem.Enabled = true;
             }
-            if (Outils.formModifierEmployeDispo)
+            if (Outils.formRegarderPrets)
             {
-                modifierEmployéToolStripMenuItem.Enabled = true;
+                voirPretsToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -67,6 +67,7 @@ namespace projetFinal.formulaires
             Outils.formCreerLivre = true;
             Outils.formVisualiserEmployes = true;
             Outils.formModifierEmployeDispo = true;
+            Outils.formRegarderPrets = true;
         }
 
         /// <summary>
@@ -146,10 +147,21 @@ namespace projetFinal.formulaires
             if (Outils.formModifierEmployeDispo)
             {
                 Outils.formModifierEmployeDispo = false;
-                modifierEmployéToolStripMenuItem.Enabled = false;
                 FormModifierCompte formulaireModifierCompte = new FormModifierCompte();
                 formulaireModifierCompte.MdiParent = this;
                 formulaireModifierCompte.Show();
+            }
+        }
+
+        private void voirPretsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Outils.formRegarderPrets)
+            {
+                Outils.formRegarderPrets = false;
+                voirPretsToolStripMenuItem.Enabled = false;
+                FormRegarderPrets formPrets = new FormRegarderPrets();
+                formPrets.MdiParent = this;
+                formPrets.Show();
             }
         }
     }

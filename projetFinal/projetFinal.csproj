@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -84,12 +85,6 @@
     </Compile>
     <Compile Include="formulaires\FormRegarderEmployes.Designer.cs">
       <DependentUpon>FormRegarderEmployes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formulaires\FormModifierLivre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formulaires\FormModifierLivre.Designer.cs">
-      <DependentUpon>FormModifierLivre.cs</DependentUpon>
     </Compile>
     <Compile Include="formulaires\FormCompteEmploye.cs">
       <SubType>Form</SubType>
@@ -164,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\FormModifierCompte.resx">
       <DependentUpon>FormModifierCompte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formulaires\FormModifierLivre.resx">
-      <DependentUpon>FormModifierLivre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\FormPrets.resx">
       <DependentUpon>FormPrets.cs</DependentUpon>
